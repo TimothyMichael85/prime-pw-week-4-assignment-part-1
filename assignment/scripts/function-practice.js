@@ -9,7 +9,7 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log('Q1: Test - should say "Hello World!"', hello());
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
@@ -19,7 +19,7 @@ function helloName( name ) {
   return name;
 }
 // Remember to call the function to test
-console.log('Should say "Hey, Tim!":', helloName()); 
+console.log('Q2: Should say "Hey, Tim!":', helloName()); 
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber ) {
@@ -27,14 +27,14 @@ function addNumbers( firstNumber ) {
   return firstNumber;
   // return firstNumber;
 }
-console.log('Should be 13:', addNumbers());
+console.log('Q3: Should be 13:', addNumbers());
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( multiTrips ) {
 multiTrips = 9 * 2 * 3;
 return multiTrips;
 }
-console.log ('Dance all night at Studio', multiplyThree())
+console.log ('Q4: Dance all night at Studio', multiplyThree())
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -46,9 +46,10 @@ function isPositive( number ) {
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log('Q5:');
+console.log( '  isPositive - should say true', isPositive(3) );
+console.log( '  isPositive - should say false', isPositive(0) );
+console.log( '  isPositive - should say false', isPositive(-3) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
@@ -60,8 +61,9 @@ if (array.length === 0){
 }
   else return lastElement;
 }
-console.log('should say "eggs"', getLast(['fruit', 'milk', 'bread', 'eggs']));
-console.log('should say "undefined"', getLast(true));
+console.log('Q6:')
+console.log(' should say "eggs"', getLast(['fruit', 'milk', 'bread', 'eggs']));
+console.log(' should say "undefined"', getLast(true));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
@@ -72,12 +74,12 @@ function find( value, array ){
   if (array[i] === value){
     return true;
   }
-  else 
-      return false;
-}  
+  return false; 
+} 
+console.log('Q7:')
+console.log(  'if value is found, should say "true":', find(13,testArray));
+console.log(  'if value is not found, should say "false":', find(19,testArray));
 
-console.log('if value is found, should say "true":', find(13,testArray));
-console.log('if value is found, should say "false":', find(66,testArray));
 
 // ----------------------
 // Stretch Goals
@@ -85,10 +87,15 @@ console.log('if value is found, should say "false":', find(66,testArray));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+letter = "abcdefghijklmnopqrstuvwxyz".split("");
+  if (string.charAt(0) === letter){
+    return true;
+  }
+  return false;
 }
-//console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-//console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log('Q8:')
+console.log( '  isFirstLetter - should say true', isFirstLetter('a', 'apple') );
+console.log( '  isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
