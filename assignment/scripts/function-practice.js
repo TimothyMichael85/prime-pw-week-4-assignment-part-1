@@ -15,30 +15,34 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
+  name = 'Hey, Tim!';
+  return name;
 }
 // Remember to call the function to test
-
+console.log('Should say "Hey, Tim!":', helloName()); 
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
+  firstNumber = 9 + 4;
+  return firstNumber;
+  // return firstNumber;
 }
-
+console.log('Should be 13:', addNumbers());
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( multiTrips ) {
+multiTrips = 9 * 2 * 3;
+return multiTrips;
 }
-
+console.log ('Dance all night at Studio', multiplyThree())
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+    else return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -49,16 +53,31 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
-
+function getLast( array, lastElement ) {
+lastElement = array[array.length - 1];
+if (array.length === 0){
+  return undefined;
 }
+  else return lastElement;
+}
+console.log('should say "eggs"', getLast(['fruit', 'milk', 'bread', 'eggs']));
+console.log('should say "undefined"', getLast(true));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 function find( value, array ){
-  
-}
+  for (let i=0; i< array.length; i++) 
+  if (array[i] === value){
+    return true;
+  }
+  else 
+      return false;
+}  
+
+console.log('if value is found, should say "true":', find(13,testArray));
+console.log('if value is found, should say "false":', find(66,testArray));
 
 // ----------------------
 // Stretch Goals
@@ -68,8 +87,8 @@ function find( value, array ){
 function isFirstLetter(letter, string) {
 
 }
-console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+//console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
+//console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
