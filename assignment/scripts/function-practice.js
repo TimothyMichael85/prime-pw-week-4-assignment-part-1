@@ -22,19 +22,23 @@ function helloName( name ) {
 console.log('Should say "Hey, Tim!":', helloName()); 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  firstNumber = 9 + 4;
-  return firstNumber;
+function addNumbers( numOne, numTwo ) {
+  addition = numOne + numTwo;
+  return addition;
   // return firstNumber;
 }
-console.log('Should be 13:', addNumbers());
+console.log('Addition: Should be 13:', addNumbers(9,4));
+console.log('Addition: Should be 98:', addNumbers(56,42));
+console.log('Addition: Should be 568:', addNumbers(127,441));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( multiTrips ) {
-multiTrips = 9 * 2 * 3;
+function multiplyThree( numOne, numTwo, numThree ) {
+multiTrips = numOne * numTwo * numThree;
 return multiTrips;
 }
-console.log ('Dance all night at Studio', multiplyThree())
+console.log ('Dance all night at Studio', multiplyThree(9,2,3));
+console.log ('Multiplication: Should be 5850: ', multiplyThree(25,6,39));
+console.log ('Multiplication: Should be 3810625', multiplyThree(125,67,455));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -66,19 +70,23 @@ console.log('should say "undefined"', getLast(true));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-function find( value, array ){
+const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+function find (val, array){
+  array = testArray;
+  //value = array;
   for (let i=0; i< array.length; i++) 
-  if (array[i] === value){
+  if (val === array[i]){
     return true;
   }
-    else 
       return false;
 }  
 
-console.log('if value is found, should say "true":', find(13,testArray));
-console.log('if value is found, should say "false":', find(66,testArray));
-
+console.log('if value is found, should say "true":', find(1));
+console.log('if value is found, should say "true":', find(7));
+console.log('if value is found, should say "true":', find(13));
+console.log('if value is found, should say "false":', find(66));
+console.log('if value is found, should say "false":', find(0));
+console.log('if value is found, should say "false":', find(127));
 // ----------------------
 // Stretch Goals
 // ----------------------
